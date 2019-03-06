@@ -1,6 +1,7 @@
 package Frame_Views;
 
 import AppPackage.AnimationClass;
+import java.awt.Color;
 import java.awt.Image;
 import javafx.animation.Animation;
 import javax.swing.ImageIcon;
@@ -9,13 +10,19 @@ import javax.swing.ImageIcon;
  *
  * @author andrey04
  */
-public class Login_Frame extends javax.swing.JFrame {
+public final class Login_Frame extends javax.swing.JFrame {
 public Login_Frame() {
         initComponents();
         setLocationRelativeTo(null);
         setIconImage(new ImageIcon(getClass().getResource("../Image_Resources/Movie.png")).getImage());
+        SetColors();
 
     }
+
+public void SetColors(){
+    Login_Label.setForeground(new Color(255, 235, 59));
+    Login_Label.setOpaque(true);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,12 +39,13 @@ public Login_Frame() {
         Text_User = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
+        Login_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Movie Flex"); // NOI18N
 
         jPanel1.setBackground(java.awt.SystemColor.controlLtHighlight);
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Label_Bienvenida.setFont(new java.awt.Font("Book Antiqua", 0, 24)); // NOI18N
@@ -54,10 +62,10 @@ public Login_Frame() {
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 410, 30));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 410, 30));
 
-        jLabel1.setBackground(new java.awt.Color(240, 183, 118));
-        jLabel1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
-        jLabel1.setText("                                                Login");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 410, 50));
+        Login_Label.setBackground(new java.awt.Color(240, 183, 118));
+        Login_Label.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        Login_Label.setText("                                      Login");
+        jPanel1.add(Login_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 410, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,9 +118,9 @@ public Login_Frame() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Label_Bienvenida;
+    private javax.swing.JLabel Login_Label;
     private javax.swing.JTextField Text_Pass;
     private javax.swing.JTextField Text_User;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
