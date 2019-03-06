@@ -1,5 +1,10 @@
 package Frame_Views;
 
+import AppPackage.AnimationClass;
+import java.awt.Image;
+import javafx.animation.Animation;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author andrey04
@@ -7,7 +12,9 @@ package Frame_Views;
 public class Login_Frame extends javax.swing.JFrame {
 public Login_Frame() {
         initComponents();
-        setLocationRelativeTo(this);
+        setLocationRelativeTo(null);
+        setIconImage(new ImageIcon(getClass().getResource("../Image_Resources/Movie.png")).getImage());
+
     }
 
     /**
@@ -20,33 +27,37 @@ public Login_Frame() {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        ICon_Text_Label = new javax.swing.JLabel();
+        Label_Bienvenida = new javax.swing.JLabel();
+        Text_Pass = new javax.swing.JTextField();
+        Text_User = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("Movie Flex"); // NOI18N
 
         jPanel1.setBackground(java.awt.SystemColor.controlLtHighlight);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ICon_Text_Label.setText("Movies Center");
+        Label_Bienvenida.setFont(new java.awt.Font("Book Antiqua", 0, 24)); // NOI18N
+        Label_Bienvenida.setText("¡Genial verte de nuevo!");
+        jPanel1.add(Label_Bienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 260, 90));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(ICon_Text_Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 710, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ICon_Text_Label, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 628, Short.MAX_VALUE))
-        );
+        Text_Pass.setFont(new java.awt.Font("Calibri Light", 0, 16)); // NOI18N
+        Text_Pass.setBorder(null);
+        jPanel1.add(Text_Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 410, 50));
+
+        Text_User.setFont(new java.awt.Font("Calibri Light", 0, 16)); // NOI18N
+        Text_User.setBorder(null);
+        jPanel1.add(Text_User, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 410, 50));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 410, 30));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 410, 30));
+
+        jLabel1.setBackground(new java.awt.Color(240, 183, 118));
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI", 0, 13)); // NOI18N
+        jLabel1.setText("                                                Login");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 410, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,8 +109,12 @@ public Login_Frame() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ICon_Text_Label;
+    private javax.swing.JLabel Label_Bienvenida;
+    private javax.swing.JTextField Text_Pass;
+    private javax.swing.JTextField Text_User;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }
